@@ -1,73 +1,86 @@
-# 🖥️ doineedtoupgrade
+# 🖥️ doineedtoupgrade (macOS)
 
-A simple, readable system info script for Mac — built for humans.  
-Outputs your current system specs in layman’s terms so you can quickly assess your machine's performance and decide if it's time for an upgrade.
+A readable Bash script that shows you your Mac’s current system info — like memory, CPU, disk space, macOS version, and battery — in plain, human-friendly language.
 
----
-
-## 🎯 Objective
-
-To display key Mac system information in a **clean, easy-to-understand format** — not as a wall of technical jargon, but as something anyone can glance at and understand.
+Made for curious users, engineers, and makers who want quick clarity without digging through technical menus.
 
 ---
 
-## Current Features
+## 📦 What's Included
 
--  **Hardware Info**
-    - Memory (RAM) in GB
-    - Processor (CPU) model
-    - Mac model identifier
-
-- **Storage**
-    - Total, used, and available space (in GB)
-
-- **Software**
-    - macOS version
-    - System uptime
-
-- **Network**
-    - Current user
-    - Local IP address
-
-- **Power**
-    - Battery percentage and charging status
+- `system_info.sh`: A lightweight script that displays your Mac’s hardware, software, and power status in grouped sections with clean output.
 
 ---
 
-## Planned Features & Roadmap
+## 🛠️ How It Works
 
-- **Upgrade Suggestions**
-    - Recommend upgrade if RAM is low
-    - Alert if storage is consistently near full
-    - Note if OS is outdated
+When you run the script, it pulls information directly from macOS system commands and presents it in clearly labeled categories:
 
-- **Internet Diagnostics**
-    - Test connectivity
-    - Show Wi-Fi strength & SSID
+- **Hardware**: RAM, CPU, and Mac model
+- **Storage**: Disk space used and available
+- **Software**: macOS version and uptime
+- **Network**: Logged-in user and IP address
+- **Power**: Battery percentage and charging status
 
-- **“Plain vs Pretty” Mode**
-    - `--plain` flag for clean output without emojis
-
-- **Export Options**
-    - Save output as `.txt` or `.json`
-    - Option to email or log info
-
-- 🌱 **Beginner Help**
-    - Inline explanations: what is RAM, why does uptime matter, etc.
-    - Link to upgrade resources (e.g., Apple RAM upgrade guide)
-
-- 💻 **GUI Wrapper (Phase 2)**
-    - Simple macOS app using Automator or Swift
-    - Drag-and-drop version for non-technical users
-
-- 🌐 **HTML/Hosted Version**
-    - Embed script in a static S3-hosted HTML page
-    - Possible domain: `doineedtoupgrade.com`
+No dependencies. No configuration. Just info.
 
 ---
 
-## 📦 Installation & Usage
+## ⚙️ How to Use
 
-```bash
-chmod +x system_info.sh
-./system_info.sh
+1. Download the script:
+  - `system_info.sh`
+
+2. Make it executable:
+   ```bash
+   chmod +x system_info.sh
+   ```
+
+3. Run the script:
+   ```bash
+   ./system_info.sh
+   ```
+
+---
+
+## 🧾 Example Output
+
+```
+===============================
+🖥️  BASIC MAC SYSTEM INFO
+===============================
+
+🔧 Hardware:
+  🧠 Memory (RAM):         16 GB
+  ⚙️  Processor (CPU):      Apple M1 Pro
+  💻 Mac Model Identifier: MacBookPro18,3
+
+💽 Storage:
+  📦 Disk Space:
+    Total:     494 GB
+    Used:      210 GB
+    Available: 284 GB
+
+🧾 Software:
+  macOS Version: 13.6.1
+  ⏱️  Uptime:       2 days, 5:23
+
+🌐 Network:
+  👤 Current User:    amiel
+  🌍 Local IP Address: 192.168.1.24
+
+🔋 Power:
+  Battery: 84% (charging)
+
+===============================
+```
+
+---
+
+## 🔁 If Something Goes Wrong
+
+No system changes are made — this is read-only. If anything looks off, you can simply re-run the script or review it before use. It’s yours to modify, expand, and learn from.
+
+---
+
+### 🧙🏾‍♂️‍ Created by [Amiel Terry](https://amielterry.me) & Arcane Systems LLC
